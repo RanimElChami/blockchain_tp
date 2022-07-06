@@ -1,0 +1,11 @@
+2020-06-02 12:29:13.659 UTC [lscc] executeInstall -> INFO 02f Installed Chaincode [excc] Version [v1.0] to peer
+2020-06-02 12:29:13.660 UTC [endorser] callChaincode -> INFO 030 finished chaincode: lscc duration: 73343ms channel= txID=5db693e3
+2020-06-02 12:29:13.660 UTC [comm.grpc.server] 1 -> INFO 031 unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=172.27.0.1:37498 grpc.code=OK grpc.call_duration=1m13.398936653s
+2020-06-02 12:35:18.387 UTC [endorser] callChaincode -> INFO 032 finished chaincode: lscc duration: 1034ms channel=bankscochannel txID=5abfd5a7
+2020-06-02 12:35:18.388 UTC [comm.grpc.server] 1 -> INFO 033 unary call completed grpc.service=protos.Endorser grpc.method=ProcessProposal grpc.peer_address=172.27.0.1:37506 grpc.code=OK grpc.call_duration=1.037727363s
+2020-06-02 12:35:20.464 UTC [gossip.privdata] StoreBlock -> INFO 034 [bankscochannel] Received block [1] from buffer
+2020-06-02 12:35:20.483 UTC [committer.txvalidator] Validate -> INFO 035 [bankscochannel] Validated block [1] in 9ms
+2020-06-02 12:35:20.483 UTC [gossip.privdata] prepareBlockPvtdata -> INFO 036 Successfully fetched all eligible collection private write sets for block [1] channel=bankscochannel
+2020-06-02 12:35:20.484 UTC [cceventmgmt] HandleStateUpdates -> INFO 037 Channel [bankscochannel]: Handling deploy or update of chaincode [excc]
+2020-06-02 12:35:20.644 UTC [kvledger] CommitLegacy -> INFO 038 [bankscochannel] Committed block [1] with 1 transaction(s) in 160ms (state_validation=149ms block_and_pvtdata_commit=5ms state_commit=1ms) commitHash=[a651b0364943cc1e8f5cc5c172611ad03ebeb976f1e84cff033361d265182b9d]
+2020-06-02 12:35:20.655 UTC [comm.grpc.server] 1 -> INFO 039 streaming call completed grpc.service=protos.Deliver grpc.method=DeliverFiltered grpc.peer_address=172.27.0.1:37506 error="context finished before block retrieved: context canceled" grpc.code=Unknown grpc.call_duration=2.214718089s

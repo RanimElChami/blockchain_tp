@@ -1,0 +1,48 @@
+{
+	"name": "exchange-network",
+	"version": "1.0.0",
+	"client": {
+		"tlsEnable": true,
+		"adminCredential": {
+			"id": "admin",
+			"password": "adminpw"
+		},
+		"enableAuthentication": true,
+		"organization": "bank1",
+		"connection": {
+			"timeout": {
+				"peer": {
+					"endorser": "300"
+				},
+				"orderer": "300"
+			}
+		}
+	},
+	"channels": {
+		"bankscochannel": {
+			"peers": {
+				"peer0.bank1.banksco.com": {}
+			}
+		}
+	},
+	"organizations": {
+		"bank1": {
+			"mspid": "Bank1MSP",
+			"adminPrivateKey": {
+				"path": "/tmp/crypto/peerOrganizations/bank1.banksco.com/users/Admin@bank1.banksco.com/msp/keystore/priv_sk"
+			},
+			"peers": ["peer0.bank1.banksco.com"],
+			"signedCert": {
+				"path": "/tmp/crypto/peerOrganizations/bank1.banksco.com/users/Admin@bank1.banksco.com/msp/signcerts/Admin@bank1.banksco.com-cert.pem"
+			}
+		}
+	},
+	"peers": {
+		"peer0.bank1.banksco.com": {
+			"tlsCACerts": {
+				"path": "/tmp/crypto/peerOrganizations/bank1.banksco.com/peers/peer0.bank1.banksco.com/tls/ca.crt"
+			},
+			"url": "grpcs://peer0.bank1.banksco.com:7051"
+		}
+	}
+}

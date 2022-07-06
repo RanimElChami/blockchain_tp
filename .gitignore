@@ -1,0 +1,6 @@
+*.iml
+ExchangeApp/**/node_modules
+ExchangeCC/**/vendor
+ExchangeCC/**/pkg
+ExchangeNetwork/**/crypto-config/*
+ExchangeNetwork/**/channel-artifacts/*

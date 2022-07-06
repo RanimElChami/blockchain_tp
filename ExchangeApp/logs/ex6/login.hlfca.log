@@ -1,0 +1,33 @@
+2020/06/26 12:44:16 [DEBUG] Received registration request from admin: { Name:Jim Type:client Secret:**** MaxEnrollments:1 Affiliation:bank1.department1 Attributes:[] CAName:ca-bank1  }
+2020/06/26 12:44:16 [DEBUG] canRegister - Check to see if user 'admin' can register
+2020/06/26 12:44:16 [DEBUG] Checking to see if caller 'admin' can act on type 'client'
+2020/06/26 12:44:16 [DEBUG] Checking to see if caller 'admin' is a registrar
+2020/06/26 12:44:16 [DEBUG] Validating affiliation: bank1.department1
+2020/06/26 12:44:16 [DEBUG] Checking to see if affiliation 'bank1.department1' contains caller's affiliation ''
+2020/06/26 12:44:16 [DEBUG] Caller has root affiliation
+2020/06/26 12:44:16 [DEBUG] DB: Get affiliation bank1.department1
+2020/06/26 12:44:16 [DEBUG] Registering user id: Jim
+2020/06/26 12:44:16 [DEBUG] Max enrollment value verification - User specified max enrollment: 1, CA max enrollment: -1
+2020/06/26 12:44:16 [DEBUG] DB: Getting identity Jim
+2020/06/26 12:44:16 [DEBUG] DB: Add identity Jim
+2020/06/26 12:44:17 [DEBUG] Successfully added identity Jim to the database
+2020/06/26 12:44:17 [INFO] 172.24.0.1:40472 POST /api/v1/register 201 0 "OK"
+2020/06/26 12:44:17 [DEBUG] Received request for /api/v1/enroll
+2020/06/26 12:44:17 [DEBUG] ca.Config: &{Version:0 Cfg:{Identities:{PasswordAttempts:10 AllowRemove:false} Affiliations:{AllowRemove:false}} CA:{Name:ca-bank1 Keyfile:/etc/hyperledger/fabric-ca-server-config/priv_sk Certfile:/etc/hyperledger/fabric-ca-server-config/ca.bank1.banksco.com-cert.pem Chainfile:/etc/hyperledger/fabric-ca-server-config/ca-chain.pem} Signing:0xc000305a90 CSR:{CN:ca.bank1.banksco.com Names:[{C:US ST:North Carolina L: O:Hyperledger OU:Fabric SerialNumber:}] Hosts:[56ce4621e6c5] KeyRequest:0xc0002e08e0 CA:0xc0002e0960 SerialNumber:} Registry:{MaxEnrollments:-1 Identities:[{ Name:**** Pass:**** Type:client Affiliation: MaxEnrollments:-1 Attrs:map[hf.IntermediateCA:1 hf.Registrar.DelegateRoles:client,user,validator,auditor hf.Registrar.Roles:client,user,peer,validator,auditor hf.Revoker:1]  }]} Affiliations:map[bank1:[department1 department2]] LDAP:{ Enabled:false URL:ldap://****:****@<host>:<port>/<base> UserFilter:(uid=%s) GroupFilter:(memberUid=%s) Attribute:{[] [] map[]} TLS:{false [/etc/hyperledger/fabric-ca-server-config/ldap-server-cert.pem] {/etc/hyperledger/fabric-ca-server-config/ldap-client-key.pem /etc/hyperledger/fabric-ca-server-config/ldap-client-cert.pem}}  } DB:{ Type:sqlite3 Datasource:/etc/hyperledger/fabric-ca-server-config/fabric-ca-server.db TLS:{false [/etc/hyperledger/fabric-ca-server-config/db-server-cert.pem] {/etc/hyperledger/fabric-ca-server-config/db-client-key.pem /etc/hyperledger/fabric-ca-server-config/db-client-cert.pem}}  } CSP:0xc0002e0f40 Client:<nil> Intermediate:{ParentServer:{ URL: CAName:  } TLS:{Enabled:false CertFiles:[] Client:{KeyFile: CertFile:}} Enrollment:{ Name: Secret:**** CAName: AttrReqs:[] Profile: Label: CSR:<nil> Type:x509  }} CRL:{Expiry:24h0m0s} Idemix:{IssuerPublicKeyfile:/etc/hyperledger/fabric-ca-server-config/IssuerPublicKey IssuerSecretKeyfile:/etc/hyperledger/fabric-ca-server-config/msp/keystore/IssuerSecretKey RevocationPublicKeyfile:/etc/hyperledger/fabric-ca-server-config/IssuerRevocationPublicKey RevocationPrivateKeyfile:/etc/hyperledger/fabric-ca-server-config/msp/keystore/IssuerRevocationPrivateKey RHPoolSize:100 NonceExpiration:15s NonceSweepInterval:15m}}
+2020/06/26 12:44:17 [DEBUG] DB: Getting identity Jim
+2020/06/26 12:44:17 [DEBUG] DB: Login user Jim with max enrollments of 1 and state of 0
+2020/06/26 12:44:17 [DEBUG] DB: identity Jim successfully logged in
+2020/06/26 12:44:17 [DEBUG] DB: Getting identity Jim
+2020/06/26 12:44:17 [DEBUG] Processing sign request: id=Jim, CommonName=Jim, Subject=<nil>
+2020/06/26 12:44:17 [DEBUG] Request is not for a CA signing certificate
+2020/06/26 12:44:17 [DEBUG] Checking CSR fields to make sure that they do not exceed maximum character limits
+2020/06/26 12:44:17 [DEBUG] Finished processing sign request
+2020/06/26 12:44:17 [DEBUG] DB: Getting identity Jim
+2020/06/26 12:44:17 [DEBUG] Attribute extension being added to certificate is: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a2262616e6b312e6465706172746d656e7431222c2268662e456e726f6c6c6d656e744944223a224a696d222c2268662e54797065223a22636c69656e74227d7d}
+2020/06/26 12:44:17 [DEBUG] Adding attribute extension to CSR: &{ID:[1 2 3 4 5 6 7 8 1] Critical:false Value:7b226174747273223a7b2268662e416666696c696174696f6e223a2262616e6b312e6465706172746d656e7431222c2268662e456e726f6c6c6d656e744944223a224a696d222c2268662e54797065223a22636c69656e74227d7d}
+2020/06/26 12:44:17 [INFO] signed certificate with serial number 685084167119992717757888454065730319533813275886
+2020/06/26 12:44:17 [DEBUG] DB: Insert Certificate
+2020/06/26 12:44:17 [DEBUG] Saved serial number as hex 78003c8cb7e65638ede296c161e3a86b319c1cee
+2020/06/26 12:44:17 [DEBUG] saved certificate with serial number 685084167119992717757888454065730319533813275886
+2020/06/26 12:44:17 [DEBUG] Successfully incremented state for identity Jim to 1
+2020/06/26 12:44:17 [INFO] 172.24.0.1:40476 POST /api/v1/enroll 201 0 "OK"

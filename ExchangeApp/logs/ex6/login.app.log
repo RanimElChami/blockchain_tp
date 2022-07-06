@@ -1,0 +1,8 @@
+[2020-06-26 14:44:11.700] [INFO] SampleWebApp - ****************** SERVER STARTED ************************
+[2020-06-26 14:44:11.704] [INFO] SampleWebApp - **************  http://localhost:4000  ******************
+[2020-06-26 14:44:12.287] [INFO] Users - Successfully enrolled admin@bank2 user admin and imported it into the wallet
+[2020-06-26 14:44:12.303] [INFO] Users - Successfully enrolled admin@bank1 user admin and imported it into the wallet
+[2020-06-26 14:44:16.903] [DEBUG] SampleWebApp - End point : /users
+[2020-06-26 14:44:16.903] [DEBUG] SampleWebApp - User name : Jim
+[2020-06-26 14:44:16.903] [DEBUG] SampleWebApp - Org name  : bank1
+[2020-06-26 14:44:17.275] [INFO] Users - Successfully registered and enrolled client user@bank1 Jim and imported it into the wallet

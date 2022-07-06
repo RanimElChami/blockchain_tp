@@ -1,0 +1,176 @@
+[2020-06-02 14:35:17.212] [DEBUG] SampleWebApp - Decoded from JWT token: username - Jim, orgname - bank1
+[2020-06-02 14:35:17.214] [DEBUG] SampleWebApp - ==================== INSTANTIATE CHAINCODE ==================
+[2020-06-02 14:35:17.214] [DEBUG] SampleWebApp - channelName  : bankscochannel
+[2020-06-02 14:35:17.214] [DEBUG] SampleWebApp - chaincodeName : excc
+[2020-06-02 14:35:17.214] [DEBUG] SampleWebApp - chaincodeVersion  : v1.0
+[2020-06-02 14:35:17.215] [DEBUG] SampleWebApp - fcn  : undefined
+[2020-06-02 14:35:17.215] [DEBUG] SampleWebApp - args  : a,100,b,200
+[2020-06-02 14:35:17.215] [DEBUG] SampleWebApp - chaincodeType : golang
+[2020-06-02 14:35:17.215] [DEBUG] SampleWebApp - chaincodeType : undefined
+[2020-06-02 14:35:17.215] [DEBUG] SampleWebApp - chaincodeType : undefined
+[2020-06-02 14:35:17.218] [DEBUG] instantiate-chaincode -
+
+============ Instantiate chaincode on channel bankscochannel ============
+
+[2020-06-02 14:35:17.218] [DEBUG] Helper - getClientForOrg - ****** START bank1 undefined
+[2020-06-02 14:35:17.218] [DEBUG] Helper - get client from config : network-connection-profile-path
+[2020-06-02 14:35:17.228] [DEBUG] Helper - [NetworkConfig101.js]: constructor, network_config: {"name":"ExchangeApp","x-type":"hlfv1","description":"Exchange Network","version":"1.0","channels":{"bankscochannel":{"orderers":["orderer.banksco.com"],"peers":{"peer0.bank1.banksco.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.bank1.banksco.com":{"endorsingPeer":false,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer0.bank2.banksco.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true},"peer1.bank2.banksco.com":{"endorsingPeer":true,"chaincodeQuery":true,"ledgerQuery":true,"eventSource":true}},"chaincodes":["exchangeCC:v0"]}},"organizations":{"Bank1":{"mspid":"Bank1MSP","peers":["peer0.bank1.banksco.com","peer1.bank1.banksco.com"],"certificateAuthorities":["ca-bank1"],"adminPrivateKey":{"path":"../../ExchangeNetwork/CCLifeCycleHLFv1/crypto-config/peerOrganizations/bank1.banksco.com/users/Admin@bank1.banksco.com/msp/keystore/priv_sk"},"signedCert":{"path":"../../ExchangeNetwork/CCLifeCycleHLFv1/crypto-config/peerOrganizations/bank1.banksco.com/users/Admin@bank1.banksco.com/msp/signcerts/Admin@bank1.banksco.com-cert.pem"}},"Bank2":{"mspid":"Bank2MSP","peers":["peer0.bank2.banksco.com","peer1.bank2.banksco.com"],"certificateAuthorities":["ca-bank2"],"adminPrivateKey":{"path":"../../ExchangeNetwork/CCLifeCycleHLFv1/crypto-config/peerOrganizations/bank2.banksco.com/users/Admin@bank2.banksco.com/msp/keystore/priv_sk"},"signedCert":{"path":"../../ExchangeNetwork/CCLifeCycleHLFv1/crypto-config/peerOrganizations/bank2.banksco.com/users/Admin@bank2.banksco.com/msp/signcerts/Admin@bank2.banksco.com-cert.pem"}}},"orderers":{"orderer.banksco.com":{"url":"grpcs://localhost:7050","grpcOptions":{"ssl-target-name-override":"orderer.banksco.com"},"tlsCACerts":{"path":"../../ExchangeNetwork/CCLifeCycleHLFv1/crypto-config/ordererOrganizations/banksco.com/orderers/orderer.banksco.com/tls/ca.crt"}}},"peers":{"peer0.bank1.banksco.com":{"url":"grpcs://localhost:7051","grpcOptions":{"ssl-target-name-override":"peer0.bank1.banksco.com"},"tlsCACerts":{"path":"../../ExchangeNetwork/CCLifeCycleHLFv1/crypto-config/peerOrganizations/bank1.banksco.com/peers/peer0.bank1.banksco.com/tls/ca.crt"}},"peer1.bank1.banksco.com":{"url":"grpcs://localhost:7056","grpcOptions":{"ssl-target-name-override":"peer1.bank1.banksco.com"},"tlsCACerts":{"path":"../../ExchangeNetwork/CCLifeCycleHLFv1/crypto-config/peerOrganizations/bank1.banksco.com/peers/peer1.bank1.banksco.com/tls/ca.crt"}},"peer0.bank2.banksco.com":{"url":"grpcs://localhost:8051","grpcOptions":{"ssl-target-name-override":"peer0.bank2.banksco.com"},"tlsCACerts":{"path":"../../ExchangeNetwork/CCLifeCycleHLFv1/crypto-config/peerOrganizations/bank2.banksco.com/peers/peer0.bank2.banksco.com/tls/ca.crt"}},"peer1.bank2.banksco.com":{"url":"grpcs://localhost:8056","grpcOptions":{"ssl-target-name-override":"peer1.bank2.banksco.com"},"tlsCACerts":{"path":"../../ExchangeNetwork/CCLifeCycleHLFv1/crypto-config/peerOrganizations/bank2.banksco.com/peers/peer1.bank2.banksco.com/tls/ca.crt"}}},"certificateAuthorities":{"ca-bank1":{"url":"https://localhost:7054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../../ExchangeNetwork/CCLifeCycleHLFv1/crypto-config/peerOrganizations/bank1.banksco.com/ca/ca.bank1.banksco.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"adminpw"}],"caName":"ca-bank1"},"ca-bank2":{"url":"https://localhost:8054","httpOptions":{"verify":false},"tlsCACerts":{"path":"../../ExchangeNetwork/CCLifeCycleHLFv1/crypto-config/peerOrganizations/bank2.banksco.com/ca/ca.bank2.banksco.com-cert.pem"},"registrar":[{"enrollId":"admin","enrollSecret":"adminpw"}],"caName":"ca-bank2"}}}
+[2020-06-02 14:35:17.229] [DEBUG] Helper - got client from config : network-connection-profile-path
+[2020-06-02 14:35:17.229] [DEBUG] Helper - load from config : bank1-connection-profile-path
+[2020-06-02 14:35:17.234] [DEBUG] Helper - [NetworkConfig101.js]: constructor, network_config: {"name":"ExchangeAppBank1","x-type":"hlfv1","description":"Exchange Network - client definition for Bank1","version":"1.0","client":{"organization":"Bank1","credentialStore":{"path":"/tmp/fabric-client-kv-bank1","cryptoStore":{"path":"/tmp/fabric-client-kv-bank1"}}}}
+[2020-06-02 14:35:17.234] [DEBUG] Helper - [NetworkConfig101.js]: mergeSettings - additions start
+[2020-06-02 14:35:17.235] [DEBUG] Helper - [NetworkConfig101.js]: getOrganization - name Bank1
+[2020-06-02 14:35:17.235] [DEBUG] Helper - [Organization.js]: Organization.const
+[2020-06-02 14:35:17.235] [DEBUG] Helper - [NetworkConfig101.js]: getCertificateAuthority - name ca-bank1
+[2020-06-02 14:35:17.236] [DEBUG] Helper - [CertificateAuthority.js]: CertificateAuthority.const
+[2020-06-02 14:35:17.241] [DEBUG] Helper - [crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256
+[2020-06-02 14:35:17.244] [DEBUG] Helper - [crypto_ecdsa_aes]: importKey - start
+[2020-06-02 14:35:17.247] [DEBUG] Helper - [crypto_ecdsa_aes]: importKey - have the key [Circular]
+[2020-06-02 14:35:17.248] [DEBUG] Helper - [crypto_ecdsa_aes]: importKey - start
+[2020-06-02 14:35:17.249] [DEBUG] Helper - [crypto_ecdsa_aes]: importKey - have the key [Circular]
+[2020-06-02 14:35:17.249] [DEBUG] Helper - [NetworkConfig101.js]: getOrganization - name Bank1
+[2020-06-02 14:35:17.249] [DEBUG] Helper - [Organization.js]: Organization.const
+[2020-06-02 14:35:17.249] [DEBUG] Helper - [NetworkConfig101.js]: getCertificateAuthority - name ca-bank1
+[2020-06-02 14:35:17.250] [DEBUG] Helper - [CertificateAuthority.js]: CertificateAuthority.const
+[2020-06-02 14:35:17.250] [DEBUG] Helper - loaded from config : bank1-connection-profile-path
+[2020-06-02 14:35:17.250] [DEBUG] Helper - [FileKeyValueStore.js]: constructor { options:
+   { path: '/tmp/fabric-client-kv-bank1',
+     cryptoStore: { path: '/tmp/fabric-client-kv-bank1' } } }
+[2020-06-02 14:35:17.251] [DEBUG] Helper - [crypto_ecdsa_aes]: Hash algorithm: SHA2, hash output size: 256
+[2020-06-02 14:35:17.251] [DEBUG] Helper - [utils.CryptoKeyStore]: CryptoKeyStore, constructor - start
+[2020-06-02 14:35:17.251] [DEBUG] Helper - [utils.CryptoKeyStore]: constructor, no super class specified, using config: fabric-client/lib/impl/FileKeyValueStore.js
+[2020-06-02 14:35:17.253] [DEBUG] Helper - getClientForOrg - ****** END bank1 undefined
+
+
+[2020-06-02 14:35:17.253] [DEBUG] instantiate-chaincode - Successfully got the fabric client for the organization "bank1"
+[2020-06-02 14:35:17.253] [DEBUG] Helper - [NetworkConfig101.js]: getChannel - name bankscochannel
+[2020-06-02 14:35:17.254] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer0.bank1.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.256] [DEBUG] Helper - [NetworkConfig101.js]: getOrganization - name Bank1
+[2020-06-02 14:35:17.256] [DEBUG] Helper - [Organization.js]: Organization.const
+[2020-06-02 14:35:17.256] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer0.bank1.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.256] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer1.bank1.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.260] [DEBUG] Helper - [NetworkConfig101.js]: getCertificateAuthority - name ca-bank1
+[2020-06-02 14:35:17.260] [DEBUG] Helper - [CertificateAuthority.js]: CertificateAuthority.const
+[2020-06-02 14:35:17.261] [DEBUG] Helper - [NetworkConfig101.js]: getOrganization - name Bank1
+[2020-06-02 14:35:17.261] [DEBUG] Helper - [Organization.js]: Organization.const
+[2020-06-02 14:35:17.261] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer0.bank1.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.261] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer1.bank1.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.261] [DEBUG] Helper - [NetworkConfig101.js]: getCertificateAuthority - name ca-bank1
+[2020-06-02 14:35:17.261] [DEBUG] Helper - [CertificateAuthority.js]: CertificateAuthority.const
+[2020-06-02 14:35:17.262] [DEBUG] Helper - [NetworkConfig101.js]: _addPeersToChannel - peer0.bank1.banksco.com - grpcs://localhost:7051
+[2020-06-02 14:35:17.262] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer1.bank1.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.262] [DEBUG] Helper - [NetworkConfig101.js]: getOrganization - name Bank1
+[2020-06-02 14:35:17.264] [DEBUG] Helper - [Organization.js]: Organization.const
+[2020-06-02 14:35:17.264] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer0.bank1.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.264] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer1.bank1.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.264] [DEBUG] Helper - [NetworkConfig101.js]: getCertificateAuthority - name ca-bank1
+[2020-06-02 14:35:17.264] [DEBUG] Helper - [CertificateAuthority.js]: CertificateAuthority.const
+[2020-06-02 14:35:17.265] [DEBUG] Helper - [NetworkConfig101.js]: getOrganization - name Bank1
+[2020-06-02 14:35:17.265] [DEBUG] Helper - [Organization.js]: Organization.const
+[2020-06-02 14:35:17.265] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer0.bank1.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.265] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer1.bank1.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.265] [DEBUG] Helper - [NetworkConfig101.js]: getCertificateAuthority - name ca-bank1
+[2020-06-02 14:35:17.268] [DEBUG] Helper - [CertificateAuthority.js]: CertificateAuthority.const
+[2020-06-02 14:35:17.269] [DEBUG] Helper - [NetworkConfig101.js]: _addPeersToChannel - peer1.bank1.banksco.com - grpcs://localhost:7056
+[2020-06-02 14:35:17.269] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer0.bank2.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.270] [DEBUG] Helper - [NetworkConfig101.js]: getOrganization - name Bank1
+[2020-06-02 14:35:17.270] [DEBUG] Helper - [Organization.js]: Organization.const
+[2020-06-02 14:35:17.270] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer0.bank1.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.270] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer1.bank1.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.270] [DEBUG] Helper - [NetworkConfig101.js]: getCertificateAuthority - name ca-bank1
+[2020-06-02 14:35:17.271] [DEBUG] Helper - [CertificateAuthority.js]: CertificateAuthority.const
+[2020-06-02 14:35:17.271] [DEBUG] Helper - [NetworkConfig101.js]: getOrganization - name Bank2
+[2020-06-02 14:35:17.272] [DEBUG] Helper - [Organization.js]: Organization.const
+[2020-06-02 14:35:17.272] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer0.bank2.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.272] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer1.bank2.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.286] [DEBUG] Helper - [NetworkConfig101.js]: getCertificateAuthority - name ca-bank2
+[2020-06-02 14:35:17.291] [DEBUG] Helper - [CertificateAuthority.js]: CertificateAuthority.const
+[2020-06-02 14:35:17.294] [DEBUG] Helper - [NetworkConfig101.js]: getOrganization - name Bank2
+[2020-06-02 14:35:17.294] [DEBUG] Helper - [Organization.js]: Organization.const
+[2020-06-02 14:35:17.294] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer0.bank2.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.294] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer1.bank2.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.294] [DEBUG] Helper - [NetworkConfig101.js]: getCertificateAuthority - name ca-bank2
+[2020-06-02 14:35:17.295] [DEBUG] Helper - [CertificateAuthority.js]: CertificateAuthority.const
+[2020-06-02 14:35:17.295] [DEBUG] Helper - [NetworkConfig101.js]: _addPeersToChannel - peer0.bank2.banksco.com - grpcs://localhost:8051
+[2020-06-02 14:35:17.295] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer1.bank2.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.295] [DEBUG] Helper - [NetworkConfig101.js]: getOrganization - name Bank1
+[2020-06-02 14:35:17.295] [DEBUG] Helper - [Organization.js]: Organization.const
+[2020-06-02 14:35:17.295] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer0.bank1.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.295] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer1.bank1.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.295] [DEBUG] Helper - [NetworkConfig101.js]: getCertificateAuthority - name ca-bank1
+[2020-06-02 14:35:17.295] [DEBUG] Helper - [CertificateAuthority.js]: CertificateAuthority.const
+[2020-06-02 14:35:17.296] [DEBUG] Helper - [NetworkConfig101.js]: getOrganization - name Bank2
+[2020-06-02 14:35:17.296] [DEBUG] Helper - [Organization.js]: Organization.const
+[2020-06-02 14:35:17.296] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer0.bank2.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.296] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer1.bank2.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.296] [DEBUG] Helper - [NetworkConfig101.js]: getCertificateAuthority - name ca-bank2
+[2020-06-02 14:35:17.297] [DEBUG] Helper - [CertificateAuthority.js]: CertificateAuthority.const
+[2020-06-02 14:35:17.297] [DEBUG] Helper - [NetworkConfig101.js]: getOrganization - name Bank2
+[2020-06-02 14:35:17.297] [DEBUG] Helper - [Organization.js]: Organization.const
+[2020-06-02 14:35:17.297] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer0.bank2.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.297] [DEBUG] Helper - [NetworkConfig101.js]: getPeer - name peer1.bank2.banksco.com, channel_org: undefined
+[2020-06-02 14:35:17.298] [DEBUG] Helper - [NetworkConfig101.js]: getCertificateAuthority - name ca-bank2
+[2020-06-02 14:35:17.298] [DEBUG] Helper - [CertificateAuthority.js]: CertificateAuthority.const
+[2020-06-02 14:35:17.299] [DEBUG] Helper - [NetworkConfig101.js]: _addPeersToChannel - peer1.bank2.banksco.com - grpcs://localhost:8056
+[2020-06-02 14:35:17.300] [DEBUG] Helper - [NetworkConfig101.js]: getOrderer - name orderer.banksco.com
+[2020-06-02 14:35:17.324] [DEBUG] Helper - [crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r:
+   <BN: 1484366c7e7b5be0d219519f6499477651907ecb284e59bb4ef401d3aeec5330>,
+  s:
+   <BN: 591b6698fbc4742b05d932a24c0fb1b54824ca0e676586616146897961cbf5c0>,
+  recoveryParam: 1 }
+[2020-06-02 14:35:18.392] [INFO] instantiate-chaincode - instantiate proposal was good
+[2020-06-02 14:35:18.392] [INFO] instantiate-chaincode - instantiate proposal was good
+[2020-06-02 14:35:18.392] [INFO] instantiate-chaincode - Successfully sent Proposal and received ProposalResponse: Status - 200, message - "", metadata - "
+exccv1.0escc"vscc**
+
+
+
+
+Bank1MSP
+
+
+Bank2MSP2D
+ �!���AE�����c�|���q��ң+O��=�� ��ճ�*���?��2�5
+                                             �q�0�ua^GB.*: ���K��!%
+                                                                   DC�g+9(z�mZ�[_N���EB.
+
+
+
+Bank1MSP
+
+Bank2MSP", endorsement signature: 0D �P���t�¡����o�O&~��1�j�*���< >n?�I9�&�¬y�3�A1��r��*�ﾒ�{
+[2020-06-02 14:35:18.394] [DEBUG] instantiate-chaincode - found 2 eventhubs for this organization bank1
+[2020-06-02 14:35:18.395] [DEBUG] instantiate-chaincode - instantiateEventPromise - setting up event
+[2020-06-02 14:35:18.410] [DEBUG] Helper - [crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r:
+   <BN: d728e286bde3e4e38ac4741773083ac0680f85ed3840fb1d33dc40f3a85c48a4>,
+  s:
+   <BN: 4f00d2ae04fe38e09ec948f733c0287913e5cedcbb1fbd697c78f804e17a2a94>,
+  recoveryParam: 0 }
+[2020-06-02 14:35:18.411] [DEBUG] instantiate-chaincode - instantiateEventPromise - setting up event
+[2020-06-02 14:35:18.423] [DEBUG] Helper - [crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r:
+   <BN: 9dc41f650dd56da38452c2049832b3f0c4834a8ce3b4b148606d679163931b9d>,
+  s:
+   <BN: 3bf07f3b3cdbc97b6844f7b74da96186454a2d2e6aba00a393d95f549a6a351e>,
+  recoveryParam: 0 }
+[2020-06-02 14:35:18.435] [DEBUG] Helper - [crypto_ecdsa_aes]: ecdsa signature:  Signature {
+  r:
+   <BN: 4376c4546c5f0a1d1976021e83cf4194f2e0d1c0b7e10d8a0a4c3cefd625057d>,
+  s:
+   <BN: 19fd48b0ef5312ef9b88e02f5fb789538bf65130307b1bd221f1443d82247f8>,
+  recoveryParam: 1 }
+[2020-06-02 14:35:20.643] [INFO] instantiate-chaincode - The chaincode instantiate transaction has been committed on peer localhost:7056
+[2020-06-02 14:35:20.644] [INFO] instantiate-chaincode - Transaction 5abfd5a718f4b6c042972a80a74697fa18ea1477582edcb57209b067340edb9d has status of VALID in blocl 1
+[2020-06-02 14:35:20.644] [INFO] instantiate-chaincode - The chaincode instantiate transaction was valid.
+[2020-06-02 14:35:20.650] [INFO] instantiate-chaincode - The chaincode instantiate transaction has been committed on peer localhost:7051
+[2020-06-02 14:35:20.651] [INFO] instantiate-chaincode - Transaction 5abfd5a718f4b6c042972a80a74697fa18ea1477582edcb57209b067340edb9d has status of VALID in blocl 1
+[2020-06-02 14:35:20.651] [INFO] instantiate-chaincode - The chaincode instantiate transaction was valid.
+[2020-06-02 14:35:20.652] [DEBUG] instantiate-chaincode - ------->>> R E S P O N S E : ["The chaincode instantiate transaction was valid.","The chaincode instantiate transaction was valid.",{"status":"SUCCESS","info":""}]
+[2020-06-02 14:35:20.653] [INFO] instantiate-chaincode - Successfully sent transaction to the orderer.
+[2020-06-02 14:35:20.653] [DEBUG] instantiate-chaincode - Event results for event hub :localhost:7051
+[2020-06-02 14:35:20.653] [DEBUG] instantiate-chaincode - The chaincode instantiate transaction was valid.
+[2020-06-02 14:35:20.653] [DEBUG] instantiate-chaincode - Event results for event hub :localhost:7056
+[2020-06-02 14:35:20.654] [DEBUG] instantiate-chaincode - The chaincode instantiate transaction was valid.
+[2020-06-02 14:35:20.654] [INFO] instantiate-chaincode - Successfully instantiate chaincode in organization bank1 to the channel 'bankscochannel'
